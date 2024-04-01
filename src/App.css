@@ -1,0 +1,27 @@
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+  background-image: url("/invite_top_left.svg"), url("/invite_top_right.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #fff7ef;
+  background-position-x: 0%, 100%;
+  background-position-y: 25vh;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+
+.welcome-container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main {
+  width: 85rem;
+}
