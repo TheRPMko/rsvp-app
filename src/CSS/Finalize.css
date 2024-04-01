@@ -1,0 +1,85 @@
+.finalize-container {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  justify-content: center;
+  width: 30rem;
+  height: 20rem;
+
+  border: var(--border);
+  padding: 1rem 2rem;
+}
+
+.finalize-container > h2 {
+  text-align: start;
+}
+
+.finalize-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 1.75rem;
+  padding: 0.2rem 2rem;
+  margin-bottom: 0.2rem;
+
+  background-color: #2e385910;
+
+  transition: background-color 0.2s ease-in-out;
+}
+
+.finalize-item > .check-container {
+  pointer-events: none;
+}
+
+.submit {
+  display: flex;
+  flex-direction: column;
+}
+
+.submit > p {
+  height: 5rem;
+  margin: 0.5rem 0;
+  padding: 0.5rem 2rem;
+  text-align: start;
+  overflow-y: scroll;
+
+  color: var(--main-blue);
+  border: 1px solid transparent;
+  background-color: #2e385910;
+}
+
+.finalize-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.finalize-buttons > button {
+  width: 5rem;
+  margin: 1rem 0.5rem 0.5rem;
+
+  font-family: Roboto, regular;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.finalize-buttons > button:first-child:hover {
+  background-color: #2e59308e;
+}
+
+.finalize-buttons > button:last-child:hover {
+  background-color: #8322228e;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .finalize-container {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .finalize-item {
+    padding: 0.2rem 1rem;
+  }
+}

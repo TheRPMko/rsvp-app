@@ -1,0 +1,21 @@
+.welcome-container {
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.main {
+  scale: 2.5;
+  object-fit: none;
+  pointer-events: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .main {
+    scale: 1.75;
+  }
+}
