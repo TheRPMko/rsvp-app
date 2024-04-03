@@ -76,7 +76,9 @@ const RSVP: React.FC<IRSVP> = ({ handleSubmit, guests }) => {
             onChange={(e) => handleChange(e)}
             placeholder="Let us know if you have any thoughts!"
           />
-          <button onClick={() => handleSubmit(rsvpArr, notes, 1)}>CONFIRM</button>
+          <button onClick={() => handleSubmit(rsvpArr, notes, 1)}>
+            CONFIRM
+          </button>
         </div>
       ) : null}
     </div>

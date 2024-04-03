@@ -23,5 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-# Guest list
+# Hidden files
 guest-list.ts
+firebase.ts
