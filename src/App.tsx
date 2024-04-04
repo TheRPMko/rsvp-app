@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { collection, setDoc, getDocs, doc } from "firebase/firestore";
+import { collection, setDoc, doc } from "firebase/firestore";
 import { db } from "./assets/firebase";
 
 import "./App.css";
@@ -22,39 +22,18 @@ function App() {
     guestsArr: string[];
     notes: string;
   }>();
-  const [, setExisting] = useState<{ id: string }[]>();
 
   // Firebase guests collection
   const guestsRef = collection(db, "guests");
 
-  async function getData(guestsArr: string[]) {
-    await getDocs(collection(db, "guests")).then((data) => {
-      const newData = data.docs.map((doc) => ({
-        ...doc.data(),
-        id: doc.id,
-      }));
-      setExisting(newData);
-      compareData(guestsArr, newData);
-    });
-  }
-
-  // Compare confirmed guests with current
-  function compareData(guestsArr: string[], newArr: { id: string }[]) {
-    console.log(newArr);
-    for (let index = 0; index < guestsArr.length; index++) {
-      console.log(newArr.filter((name) => name.id == guestsArr[index]));
-    }
-  }
-
   // Put together guest list and advance state
   const listParser = (guestsArr: string[], notes: string, step: number) => {
     setGuestList({ guestsArr, notes });
-    getData(guestsArr);
     setStep(step);
   };
 
   const submitApi = async () => {
-    console.log(guestList);
+    //console.log(guestList);
     for (let index = 0; index < guestList!.guestsArr.length; index++) {
       console.log(guestList?.guestsArr[index]);
       try {
